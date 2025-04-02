@@ -54,7 +54,7 @@ sleep 1
 # PHPローカルサーバーの起動
 echo "PHPサーバーを起動中..."
 sleep 1
-php81 -S 0.0.0.0:8080 > /dev/null 2>&1 &
+php81 -S 0.0.0.0:9999 > /dev/null 2>&1 &
 php_server_pid=$!
 
 sleep 2
