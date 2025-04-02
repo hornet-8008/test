@@ -43,18 +43,18 @@ trap stop_php_server SIGINT
 
 display_banner
 
-# 必要なパッケージのインストール（PHP、PHP-CURL、SSH）
+# 必要なパッケージのインストール
 echo "必要なパッケージをインストール中..."
 sleep 1
 apk update
 sleep 1
-apk add php81 php81-curl openssh httpd
+apk add php7 php7-curl openssh
 sleep 1
 
 # PHPローカルサーバーの起動
 echo "PHPサーバーを起動中..."
 sleep 1
-php81 -S 0.0.0.0:9999 > /dev/null 2>&1 &
+php7 -S 0.0.0.0:8888 > /dev/null 2>&1 &
 php_server_pid=$!
 
 sleep 2
